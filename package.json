@@ -4,7 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run clean && npm run webpack && concurrently \"npm run webpack:w\" \"npm run web\" \"npm run rest\"",
+    "postinstall": "npm run typings",
+    "typings" : "typings install",
+    "clean" : "rimraf dist",
+    "web" : "webpacck-deve-server",
+    "rest" : "json-server --watch --port 3010 database/db.json",
+    "webpack:w" : "webpack -w",
+    "webpack" : "webpack"
   },
   "keywords": [],
   "author": "Ashok Dey",
