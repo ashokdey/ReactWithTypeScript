@@ -12,7 +12,8 @@
         "noEmitHelpers": false,
         "sourceMap": true,
         "suppressImplicitAnyIndexErrors": true,
-        "jsx": "react"
+        "jsx": "react",
+        "lib": ["es2015", "es2017", "dom"]
     },
     "exclude": [
         "node_modules",

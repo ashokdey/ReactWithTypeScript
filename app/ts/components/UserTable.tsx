@@ -1,14 +1,29 @@
 import * as React from 'react';
+import {User} from '../models/user';
 
-export class UserTable extends React.Component<{}, {}> {
+interface UserTableProps {
+    users : User[];
+}
+
+export class UserTable extends React.Component<UserTableProps, {}> {
+
+    public static propTypes = {
+        users : React.PropTypes.arrayOf(
+            React.PropTypes.instanceOf(User),
+        ),
+    };
+
+    public static defaultProps = {
+        users : [] as User[],
+    };
+
     public render () {
         return (
             <div>
                 <h1>All the users</h1>
                 <table>
-                    <tbody>
+                    <thead>
                         <tr>
-                            <th>ID</th>
                             <th>Name</th>
                             <th>Email</th>
                             <th>CreatedOn</th>
@@ -16,18 +31,23 @@ export class UserTable extends React.Component<{}, {}> {
                             <th>Plan</th>
                             <th>Status</th>
                         </tr>
+                    </thead>
+                    <tbody>
+                        {this.props.users.map(
+                            (user : User) => {
+                                return (
+                                    <tr key={user.id}>
+                                        <td>{user.name}</td>
+                                        <td>{user.email}</td>
+                                        <td>{user.createdOn}</td>
+                                        <td>{user.usage}</td>
+                                        <td>{user.plan}</td>
+                                        <td>{user.status}</td>
+                                    </tr>
+                                );
+                            }
+                        )}
                     </tbody>
-                    <tfoot>
-                        <tr>
-                            <td>123sadas223po43a</td>
-                            <td>Ashok Dey</td>
-                            <td>ashokdey@gmail.com</td>
-                            <td>21-12-12</td>                            
-                            <td>0.2</td>
-                            <td>Premium</td>
-                            <td>Active</td>
-                        </tr>
-                    </tfoot>
                 </table>
             </div>
         );
