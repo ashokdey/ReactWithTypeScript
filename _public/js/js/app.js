@@ -65,7 +65,7 @@
 	        return _super !== null && _super.apply(this, arguments) || this;
 	    }
 	    HelloWorld.prototype.render = function () {
-	        return (React.createElement("h1", null, "Hello world!"));
+	        return (React.createElement("h1", null, "Hello React!!"));
 	    };
 	    return HelloWorld;
 	}(React.Component));
