@@ -4,6 +4,7 @@ import * as ReactDOM from 'react-dom';
 import { UserTable } from './components/UserTable'
 import { User } from './models/user';
 
+import 'bootstrap-loader';
 import '../scss/style.scss';
 
 fetch('http://localhost:3010/users')

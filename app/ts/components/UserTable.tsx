@@ -17,11 +17,26 @@ export class UserTable extends React.Component<UserTableProps, {}> {
         users : [] as User[],
     };
 
+    private containerStyle : any;
+
+    constructor(props : UserTableProps) {
+        super(props);
+
+        this.containerStyle = {
+            border : '1px solid lightgray',
+            marginTop : '50px'
+        }
+    }
+
     public render () {
         return (
-            <div>
+            <div className='container' style={this.containerStyle}>
+                <br/>
+                <hr/>
                 <h1>All the users</h1>
-                <table>
+                <hr/>
+                <br/>
+                <table className='table table-striped'>
                     <thead>
                         <tr>
                             <th>Name</th>
@@ -40,7 +55,7 @@ export class UserTable extends React.Component<UserTableProps, {}> {
                                         <td>{user.name}</td>
                                         <td>{user.email}</td>
                                         <td>{user.createdOn}</td>
-                                        <td>{user.usage}</td>
+                                        <td>{user.usage} MB</td>
                                         <td>{user.plan}</td>
                                         <td>{user.status}</td>
                                     </tr>
