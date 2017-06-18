@@ -2,57 +2,48 @@
     "widgets" : [
         {
             "id" : 1,
-            "name" : "Small Red Widget",
-            "descripttion" : "A simple small red widget",
-            "color" : "red",
-            "size" : "small",
-            "quantity" : 2,
-            "price" : 12.34
+            "name" : "Ashok Dey",
+            "email" : "ashok@admin.com",
+            "createdOn" : "12-12-12",
+            "usage" : "0.5",
+            "plan" : "premium",
+            "status" : "active"
         },
         {
             "id" : 2,
-            "name" : "Small Green Widget",
-            "descripttion" : "A simple small Green widget",
-            "color" : "green",
-            "size" : "small",
-            "quantity" : 4,
-            "price" : 8.34
+            "name" : "Ankit Dutta",
+            "email" : "ankit@dutta.com",
+            "createdOn" : "12-11-15",
+            "usage" : "0.2",
+            "plan" : "premium",
+            "status" : "active"
         },
         {
             "id" : 3,
-            "name" : "Small Purple Widget",
-            "descripttion" : "A simple small Purple widget",
-            "color" : "purple",
-            "size" : "small",
-            "quantity" : 3,
-            "price" : 15.4
+            "name" : "Anup Kumar",
+            "email" : "anup@kumar.com",
+            "createdOn" : "04-01-14",
+            "usage" : "0.1",
+            "plan" : "gold",
+            "status" : "active"
         },
         {
             "id" : 4,
-            "name" : "Large Pink Widget",
-            "descripttion" : "A simple large pink widget",
-            "color" : "pink",
-            "size" : "small",
-            "quantity" : 5,
-            "price" : 19
+            "name" : "Vikash Kumar",
+            "email" : "vk@vikash.com",
+            "createdOn" : "22-05-13",
+            "usage" : "0.8",
+            "plan" : "silver",
+            "status" : "active"
         },
         {
             "id" : 5,
-            "name" : "Large Violet Widget",
-            "descripttion" : "A simple large Violet widget",
-            "color" : "violet",
-            "size" : "large",
-            "quantity" : 4,
-            "price" : 16.9
-        },
-        {
-            "id" : 6,
-            "name" : "Medium Seagreen Widget",
-            "descripttion" : "A simple medium Seagreen widget",
-            "color" : "seagreen",
-            "size" : "medium",
-            "quantity" : 12,
-            "price" : 4.64
+            "name" : "Pooja Kumari",
+            "email" : "kumari@pooja.com",
+            "createdOn" : "04-03-17",
+            "usage" : "0.0",
+            "plan" : "regular",
+            "status" : "active"
         }
     ]
 }

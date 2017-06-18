@@ -2,26 +2,34 @@ import 'core-js';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-class WidgetTool extends React.Component<{}, {}> {
+class UserTable extends React.Component<{}, {}> {
     public render () {
         return (
             <div>
-                <h1>Widget Tool</h1>
+                <h1>All the users</h1>
                 <table>
-                    <tr>
-                        <th>Name</th>
-                        <th>Color</th>
-                        <th>Size</th>
-                        <th>Quantity</th>
-                        <th>Price</th>
-                    </tr>
-                    <tr>
-                        <td>Widget 1</td>
-                        <td>Color 1</td>
-                        <td>Small</td>
-                        <td>2</td>
-                        <td>12.32</td>
-                    </tr>
+                    <tbody>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>CreatedOn</th>
+                            <th>Usage</th>
+                            <th>Plan</th>
+                            <th>Status</th>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>123sadas223po43a</td>
+                            <td>Ashok Dey</td>
+                            <td>ashokdey@gmail.com</td>
+                            <td>21-12-12</td>                            
+                            <td>0.2</td>
+                            <td>Premium</td>
+                            <td>Active</td>
+                        </tr>
+                    </tfoot>
                 </table>
             </div>
         );
@@ -30,4 +38,4 @@ class WidgetTool extends React.Component<{}, {}> {
 
 import '../scss/style.scss';
 
-ReactDOM.render(<WidgetTool/>, document.querySelector('main'));
+ReactDOM.render(<UserTable/>, document.querySelector('main'));
