@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-class HelloWorld extends React.Component<void, void> {
+class HelloWorld extends React.Component<{}, {}> {
     public render () {
         return (
             <h1>Hello world!</h1>
