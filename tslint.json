@@ -1,0 +1,13 @@
+{
+    "extends" : "tslint.latest",
+    "rules" : {
+        "arroe-parens" : true,
+        "interface-name" : [true, "never-prefix"],
+        "no-string-literals" : false,
+        "no-cconsole" : []
+    },
+    "jsRules" : {
+        "curly" : true
+    },
+    "rulesDirectory" : []
+}
