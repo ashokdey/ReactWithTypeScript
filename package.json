@@ -7,7 +7,7 @@
     "start": "npm run clean && npm run webpack && concurrently \"npm run webpack:w\" \"npm run web\" \"npm run rest\"",
     "postinstall": "npm run typings",
     "typings": "typings install",
-    "clean": "rimraf dist",
+    "clean": "rimraf _public",
     "web": "webpack-dev-server",
     "rest": "json-server --watch --port 3010 database/db.json",
     "webpack:w": "webpack -w",

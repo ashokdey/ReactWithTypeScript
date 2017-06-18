@@ -3,8 +3,8 @@ const { ProvidePlugin } = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const SRC = 'src';
-const DIST = 'dist';
+const SRC = 'app';
+const DIST = '_public/js';
 
 module.exports = {
     entry : {
