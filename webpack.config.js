@@ -4,7 +4,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const SRC = 'app';
-const DIST = '_public/js';
+const DIST = '_public/';
 
 module.exports = {
     entry : {
@@ -68,7 +68,7 @@ module.exports = {
     devtool : 'source-map',
     
     devServer : {
-        contentBase : 'dist',
+        contentBase : '_public',
         historyApiFallback : true,
         port : 5000,
         proxy : {
