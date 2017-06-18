@@ -69,5 +69,6 @@ module.exports = {
                 target : 'http://0.0..0.0'
             }
         }
-    }
+    },
+    watch : true
 };
