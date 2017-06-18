@@ -2,5 +2,9 @@
   "globalDependencies": {
     "whatwg-fetch": "registry:dt/whatwg-fetch#0.0.0+20161004182750",
     "whatwg-streams": "registry:dt/whatwg-streams#0.0.0+20161214010628"
+  },
+  "dependencies": {
+    "react": "registry:npm/react#15.0.1+20170104200836",
+    "react-dom": "registry:npm/react-dom#15.0.1+20160826174104"
   }
 }

@@ -10,10 +10,12 @@ module.exports = {
     entry : {
         'app' : path.join(__dirname, SRC, 'ts', 'app.tsx')
     },
+
     resolve : {
         extensions : ['', '.js', '.ts', '.tsx', '.json'],
         root : path.join(__dirname, SRC, 'ts')
     },
+
     module : {
         loaders : [
             {
@@ -27,7 +29,7 @@ module.exports = {
             {
                 test : /\.scss$/,
                 exclude : [path.join(__dirname, SRC, 'ts')],
-                loader : ['style', 'css', 'postcss', 'sass']
+                loaders : ['style', 'css', 'postcss', 'sass']
             },
             {
                 test : /\.scss/,
@@ -36,17 +38,19 @@ module.exports = {
             }
         ]
     },
+
     postcss : [require('autoprefixer')],
+    
     plugins : [
         new ProvidePlugin({
             'Promise' : 'es6-promise',
             'fetch' : 'imports?this=>global!exports?global.fetch!whatwg-fetch' 
         }),
         
-        new CopyWebpackPlugin({
+        new CopyWebpackPlugin([{
             from : path.join(SRC, 'images'),
             to : path.join('..', 'images')
-        }),
+        }]),
 
         new HtmlWebpackPlugin({
             template : path.join(__dirname, SRC, 'index.html'),
@@ -54,12 +58,15 @@ module.exports = {
             inject : 'body'
         })
     ],
+    
     output : {
         path : path.join(__dirname, DIST, 'js'),
         filename : '[name].js',
         publicPath : '/js'
     },
-    devtools : 'source-map',
+    
+    devtool : 'source-map',
+    
     devServer : {
         contentBase : 'dist',
         historyApiFallback : true,
@@ -70,5 +77,6 @@ module.exports = {
             }
         }
     },
+    
     watch : true
 };
