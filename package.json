@@ -8,7 +8,7 @@
     "postinstall": "npm run typings",
     "typings": "typings install",
     "clean": "rimraf dist",
-    "web": "webpacck-deve-server",
+    "web": "webpack-dev-server",
     "rest": "json-server --watch --port 3010 database/db.json",
     "webpack:w": "webpack -w",
     "webpack": "webpack"
