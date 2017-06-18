@@ -66,7 +66,7 @@ module.exports = {
         port : 5000,
         proxy : {
             '/widgets' : {
-                target : 'http://0.0..0.0'
+                target : 'http://0.0.0.0:3010'
             }
         }
     },
