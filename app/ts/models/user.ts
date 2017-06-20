@@ -5,5 +5,5 @@ export class User {
     public createdOn : string;
     public usage : number;
     public plan : string;
-    public status : boolean;
+    public isActive : boolean;
 }

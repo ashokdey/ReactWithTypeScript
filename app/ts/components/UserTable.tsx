@@ -2,7 +2,7 @@ import * as React from 'react';
 import {User} from '../models/user';
 
 enum UserTableCols {
-    None, Name, Email, Usage, Plan, Status
+    None, Name, Email, Usage, Plan, isActive
 }
 
 interface UserTableState {
@@ -62,8 +62,8 @@ export class UserTable extends React.Component<UserTableProps, UserTableState> {
                                 style={this.activeSort(UserTableCols.Usage)}>Usage</th>
                             <th onClick={() => this.onSort(UserTableCols.Plan)}
                                 style={this.activeSort(UserTableCols.Plan)}>Plan</th>
-                            <th onClick={() => this.onSort(UserTableCols.Status)}
-                                style={this.activeSort(UserTableCols.Status)}>Status</th>
+                            <th onClick={() => this.onSort(UserTableCols.isActive)}
+                                style={this.activeSort(UserTableCols.isActive)}>Status</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -76,7 +76,7 @@ export class UserTable extends React.Component<UserTableProps, UserTableState> {
                                         <td>{user.createdOn}</td>
                                         <td>{user.usage} MB</td>
                                         <td>{user.plan}</td>
-                                        <td>{user.status}</td>
+                                        <td>{user.isActive}</td>
                                     </tr>
                                 );
                             }
